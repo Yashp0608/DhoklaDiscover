@@ -1,0 +1,52 @@
+from bs4 import BeautifulSoup
+
+def convert_test_case_to_text(test_case):
+    actions = []
+    # Split the test case string by each action
+    actions_list = test_case.split("\n")
+    
+    # Iterate over each action
+    for action in actions_list:
+        if 'Navigated to' in action:
+            actions.append("Navigated to the patients page.")
+        elif 'Clicked<' in action:
+            action_parts = action.split('<')
+            element = action_parts[1].split('>')[0]
+            element_type = element.split()[0]
+            element_info = ' '.join(element.split()[1:])
+            if element_type == 'button':
+                actions.append(f"Clicked on a button {element_info}")
+            elif element_type == 'input':
+                actions.append(f"Clicked on an input field {element_info}")
+            elif element_type == 'span':
+                actions.append(f"Clicked on a span {element_info}")
+            elif element_type == 'textarea':
+                actions.append(f"Clicked on a text area {element_info}")
+            else:
+                actions.append(f"Clicked on an element {element_info}")
+        elif 'Typed' in action:
+            actions.append(f"Typed \"{action.split('Typed')[1].split('↵')[0].strip()}\"")
+    
+    # Join all the actions into a single text
+    return '\n'.join(actions)
+
+# Example test case
+test_case = '''Navigated to https://rxtoyou.vercel.app/patients via History API
+Clicked<spanclass="SidebarComponents_patientsDate__...">
+Clicked<spanclass="fw-600 text-black">
+Clicked<buttontype="button"class="css-12b25td Orde...">
+Clicked<divid="react-select-3-o..."class=" css-1n7v3ny-opt...">
+Clicked<spanclass="ms-1">
+TypedThis order is schedylk⌫⌫⌫led 
+Typed⌫⌫⌫⌫uled ⇧at 15th m⌫March
+Clicked<labeltype="checkbox"class="ub-crsr_pointer ...">
+Clicked<inputid="isInternal"type="checkbox"+2 more>
+Clicked<textareaid="orderComment"type="textarea"+1 more>
+Typed↵'''
+
+# Convert the test case to English text
+english_text = convert_test_case_to_text(test_case)
+print(english_text)
+
+
+
