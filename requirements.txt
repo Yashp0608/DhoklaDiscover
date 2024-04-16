@@ -1,0 +1,9 @@
+flask
+flask_cors
+pandas
+numpy
+nltk
+streamlit
+pysqlite3
+gunicorn
+cohere

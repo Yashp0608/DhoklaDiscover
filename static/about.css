@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    background-image: url("./1.jpg"); /* Path to your photograph */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; /* Adjust brightness to make the photograph darker */
+}
+
+header {
+    background-color: #dcceceb8; /* Sky blue color for the header */
+    color: #000; /* Black text color */
+    padding: 20px 0; /* Adjust padding as needed */
+    position: absolute; /* Set the header position to relative */
+    z-index: 100;
+    text-align: center; /* Center the content */
+    width: 100%; /* Set the width to 100% */
+    height: 8vh; /* Set the height to your desired value */
+    top: 0;
+}
+
+
+.head_container{
+    width: 100%;
+    height: 8vh;
+    margin-top: -20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Increase the logo size */
+.logo_pic {
+    width: 38px; /* Increase the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px;
+}
+
+.logo_title_pic {
+    height: 28px;
+    margin-left: 10px;
+    width: 60%;
+}
+
+.logo{
+    width: 30%;
+    height: 6vh;
+    /* position: absolute;
+    top: 1vh; */
+    display: flex;
+    align-items: center;
+}
+
+.nav{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about_heading {
+    margin: 0;
+    font-size: 40px; /* Maintain the font size of the header */
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last child to prevent spacing */
+}
+
+.nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+ul#nav .active{
+    font-weight: bold;
+}
+
+main {  
+    background-color: #ffffff37;
+}
+
+section {
+    margin-top: 8vh;
+    padding: 20px 20px;
+    height: 86vh;
+    background-color: #ffffff37;
+    backdrop-filter: blur(5px);
+    text-align: justify;
+    overflow: auto;
+}
+
+.founder-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+/* CSS for the founder subtitle */
+.founder-subtitle {
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Adjust color as needed */
+}
+
+/* CSS for square border around the founder's picture */
+.founder-img-container {
+    width: 220px; /* Adjust the width as per your preference */
+    height: 270px; /* Adjust the height as per your preference */
+    border: 2px solid #000; /* Border color and thickness */
+    /* overflow: hidden; Hide any overflow */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    display: inline-block;
+    background-color: white;
+    box-sizing: content-box;
+    margin-top: 21px;
+}
+
+.founder-img {
+    /* position: relative;
+    top: 0; */
+    width: 220px; /* Fill the container */
+    height: 270px; /* Fill the container */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+}
+
+footer {
+    background-color: #dcceceb8; /* Sky blue color for the footer */
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Set the footer position to relative */
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.founder {
+    display: flex;
+}
+
+.found_text {
+    padding: 20px;
+    padding-top: 0;
+}
